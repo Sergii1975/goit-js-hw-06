@@ -12,10 +12,11 @@ function createBoxes(amount) {
     box.style.width = 30 + (10 * i) +'px';
     box.style.height = 30 + (10 * i) +'px';
     box.style.backgroundColor = getRandomHexColor();
-    
     elms.boxesEl.append(box);
   }
+  
 }
+    
 
 elms.btnCreateEl.addEventListener('click', () => {
   const amount = elms.contrEl.value;
