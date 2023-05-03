@@ -5,20 +5,22 @@ const elms = {
   boxesEl: document.querySelector('#boxes'),
 }
 
-function createBoxes(amount) {
-  for(let i = 0; i < amount; i +=1) {
+  function createBoxes(amount) {
+  const boxes = []
+  
+  for (let i = 0; i < amount; i += 1) {
     const box = document.createElement('div');
     
     box.style.width = 30 + (10 * i) +'px';
     box.style.height = 30 + (10 * i) +'px';
     box.style.backgroundColor = getRandomHexColor();
-    elms.boxesEl.append(box);
+    boxes.push(box) 
   }
-  
+    elms.boxesEl.append(...boxes);
 }
     
 
-elms.btnCreateEl.addEventListener('click', () => {
+  elms.btnCreateEl.addEventListener('click', () => {
   const amount = elms.contrEl.value;
   if(amount > 0) {
     createBoxes(amount);
