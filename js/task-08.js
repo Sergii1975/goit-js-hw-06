@@ -14,6 +14,5 @@ function handleSubmit(event) {
     }
     console.log( email.value, password.value);
   event.currentTarget.reset();
-
 }
 
